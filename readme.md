@@ -21,7 +21,8 @@ Permite crear, leer, actualizar y eliminar clientes, usando **consultas parametr
 - Crear clientes validando campos obligatorios y rut único.  
 - Listar clientes por filtros: rut, nombre (prefijo o completo), edad, rango de edad o todos.  
 - Modificar el nombre de un cliente por rut.  
-- Eliminar clientes por rut, nombre o edad, evitando borrado masivo si hay coincidencias múltiples.  
+- Eliminar clientes por rut, nombre o edad, evita borrado masivo si hay coincidencia en la base de datos
+  se pide ingresar un segundo parametro  y se imprime el cliente eliminado en una alerta.  
 - Respuestas JSON con códigos HTTP: 200, 201, 400, 404, 409, 500.  
 - Frontend simple con formularios separados para crear, modificar, eliminar y consultar clientes.  
 
@@ -35,10 +36,9 @@ Permite crear, leer, actualizar y eliminar clientes, usando **consultas parametr
 | GET | `/clientes?rut=<rut>` | Retorna cliente por rut |
 | GET | `/clientes?nombre=<texto>` | Lista clientes por nombre o prefijo |
 | GET | `/clientes?edad=<n>` | Lista clientes por edad |
-| GET | `/clientes?edadMin=<n>&edadMax=<m>` | Lista clientes en rango de edad |
 | POST | `/clientes` | Crea un cliente nuevo |
 | PUT | `/clientes/:rut` | Modifica solo el nombre de un cliente |
-| DELETE | `/clientes?rut=<rut>&nombre=<texto>&edad=<n>` | Elimina un cliente según criterio; si hay más de uno, pide refinar |
+| DELETE | `/clientes?rut=<rut>&nombre=<texto>&edad=<n>` | Elimina un cliente según criterio; si hay más de uno, pide ingresar un segundo parametro |
 
 
 ## Uso
