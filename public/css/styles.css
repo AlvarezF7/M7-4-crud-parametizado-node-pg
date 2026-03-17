@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #edffed;
+  color: #333;
+  min-height: 100vh;
+}
+
+#container {
+  width: 900px;
+  margin: 30px auto;
+  padding: 2rem;
+  background-color: #fffffffa;
+  border-radius: 10px;
+  box-shadow: #76ac8b 0 10px 10px;
+}
+
+h1,p {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0a8147; 
+}
+
+
+h2 {
+  margin-bottom: 15px;
+  color: #0a8147; 
+  border-bottom: 2px solid #1b3a2b;
+  padding-bottom: 5px;
+}
+
+section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #c3c3c3;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+input, #tipoBusqueda {
+  padding: 8px 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 160px;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+#resultado {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 7px;
+}
+
+#btnBuscar, #btnCerrarLista {
+  height: 35px;
+}
+
+#btnCrear, #btnModificar, #btnBuscar {
+  background-color: #099151; /* verde oscuro */
+  color: #fff;
+}
+
+#btnCrear:hover, #btnModificar:hover, #btnBuscar:hover {
+  background-color: #6fe69d;
+}
+
+#btnEliminar, #btnCerrarLista {
+  background-color: #8b0000; /* rojo oscuro */
+  color: #fff;
+}
+
+#btnEliminar:hover, #btnCerrarLista:hover {
+  background-color: #b22222;
+}
+
+/* Lista de clientes */
+ul#listaClientes {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul#listaClientes li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #f0fff0; /* verde muy claro */
+}
+
+/* Mensajes de error */
+.error {
+  color: #8b0000; /* rojo oscuro */
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Advertencia para eliminar 0 o 1 registro */
+section#tres small {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #8b0000;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #dcffe0;
+  background-color: #128b41;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRUD Clientes - Ejercicio 4</title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div id="container">
+    <h1>Gestión de Clientes V.3.0 </h1>
+    <p> cuarto trabajo del Modulo 7</p>
+
+    <!-- CREAR -->
+    <section id="uno">
+        <h2>Crear Cliente</h2>
+        <input id="crearRut" placeholder="Rut">
+        <input id="crearNombre" placeholder="Nombre">
+        <input id="crearEdad" placeholder="Edad" type="number">
+        <button id="btnCrear">Crear</button>
+        <p class="error" id="errorCrear"></p>
+    </section>
+
+    <!-- MODIFICAR -->
+    <section id="dos">
+        <h2>Modificar Cliente</h2>
+        <input id="modRut" placeholder="Rut">
+        <input id="modNombre" placeholder="Nuevo Nombre">
+        <button id="btnModificar">Modificar</button>
+        <p class="error" id="errorModificar"></p>
+    </section>
+
+    <!-- ELIMINAR -->
+    <section id="tres">
+        <h2>Eliminar Cliente</h2>
+        <input id="delRut" placeholder="Rut">
+        <input id="delNombre" placeholder="Nombre">
+        <input id="delEdad" placeholder="Edad" type="number">
+        <button id="btnEliminar">Eliminar</button>
+        <p class="error" id="errorEliminar"></p>
+        <small>Ingresa uno o más parametros.</small>
+    </section>
+
+    <!-- CONSULTAS / LISTAR -->
+    <section id="cuatro">
+        <h2>Consultar Clientes</h2>
+        <div id="resultado">
+            <select id="tipoBusqueda">
+                <option value="">Seleccione un filtro</option>
+                <option value="rut">Por Rut</option>
+                <option value="nombre">Por Nombre</option>
+                <option value="edad">Por Edad</option>
+                <option value="todos">Todos los clientes</option>
+            </select>
+            
+            <input id="buscarRut" placeholder="Rut" style="display:none">
+            <input id="buscarNombre" placeholder="Nombre" style="display:none">
+            <input id="buscarEdad" placeholder="Edad" type="number" style="display:none">
+           
+            <button id="btnBuscar">Buscar</button> 
+            <button id="btnCerrarLista" style="display:none;">X</button>    
+        </div>
+        
+        <ul id="listaClientes"></ul>
+        <p class="error" id="errorBusqueda"></p>
+    </section>
+</div>
+<footer>Proyecto con fines Educativos para el curso de Full Stack de Sence 2025-2026</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>
